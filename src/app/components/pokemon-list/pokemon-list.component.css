@@ -1,0 +1,77 @@
+h3::selection,
+p::selection {
+    background-color: #ffcc00;
+}
+
+.pokemon-grid {
+    display: grid;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 35px;
+    grid-gap: 12px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    justify-items: center;
+}
+
+.pokemon-grid .box {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.pokemon-grid .box img {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+#info-box {
+    width: 125px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.box h3,
+.box img {
+    cursor: pointer;
+}
+
+
+/* controls */
+.pagination-controls {
+    text-align: center;
+}
+
+.pagination-controls /deep/ .ngx-pagination .current {
+    margin-top: 40px;
+    background-color: #ffcc00;
+    color: #3859a6;
+    font-weight: bold;
+}
+
+
+
+/* media queries */
+@media only screen and (min-width: 701px) and (max-width:900px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width:700px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(43%, 1fr));
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(65%, 1fr));
+    }
+}
